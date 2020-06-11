@@ -1,0 +1,17 @@
+{
+  "NUnit test": {
+    "prefix": "nunittest",
+    "body": [
+      "[Test]",
+      "public void ${1:UoW}_${2:InitialConditions}_${3:ExpectedOutput}() {",
+      "    // Arrange",
+      "    ",
+      "    // Act",
+      "    ",
+      "    // Assert",
+      "    ",
+      "}"
+    ],
+    "description": "Auto generates new nunit test with which follows follows the AAA and the UoW_Conditions_ExpectedResult patterns"
+  }
+}
