@@ -1,0 +1,20 @@
+{
+  "Create Jest It": {
+    "prefix": "it",
+    "body": [
+      "it('$1', () => {",
+      "  // Arrange",
+      "",
+      "  // Act",
+      "",
+      "  // Assert",
+      "});"
+    ],
+    "description": "Template for Creating Jest it blocks"
+  },
+  "Create Jest Describe": {
+    "prefix": "describe",
+    "body": ["describe('$1', () => {", "", "});"],
+    "description": "Template for Creating Jest describe blocks"
+  }
+}
