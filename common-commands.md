@@ -4,6 +4,32 @@ This file continas several commands for various CLI's
 
 ## Git
 
+**Getting a new version of the repository on your local machine**
+
+```terminal
+git clone https://github.com/sleslein/my-repository.git
+```
+
+**Getting the latest version of the current branch**
+
+```terminal
+git pull
+```
+
+**Committing work to an existing branch**
+
+```terminal
+git add -A
+git commit -m "message"
+git push
+```
+
+**Pushing a new branch to github**
+
+```terminal
+git push --set-upstream origin my-new-branch-name
+```
+
 **Create a new brach off current**
 
 ```terminal
