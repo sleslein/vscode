@@ -1,0 +1,40 @@
+{
+  "Create Jest It": {
+    "prefix": "it",
+    "body": [
+      "it('$1', () => {",
+      "  // Arrange",
+      "",
+      "  // Act",
+      "",
+      "  // Assert",
+      "});"
+    ],
+    "description": "Template for Creating Jest it blocks"
+  },
+  "Create Jest Describe": {
+    "prefix": "describe",
+    "body": ["describe('$1', () => {", "", "});"],
+    "description": "Template for Creating Jest describe blocks"
+  },
+  "Create React Test Lib fixture": {
+    "prefix": "test fixture",
+    "description": "Template for a React Test Library Test Fixture",
+    "body": [
+      "import React from 'react';",
+      "import { render, screen, fireEvent } from '@testing-library/react';",
+      "",
+      "describe('$1', () => {",
+      "  describe('$2', () => {",
+      "    it('$3', () => {",
+      "      // Arrange",
+      "",
+      "      // Act",
+      "",
+      "      // Assert",
+      "    });",
+      "  });",
+      "});"
+    ]
+  }
+}
