@@ -1,12 +1,12 @@
 # Overview
 
-Jest really is the, "delightful JavaScript Testing Framework with a focus on simplicity", its creators have described it to be! As a result, teams should leverage as many of the defaults as possible and only divert when necessary.
+Jest really is the "delightful JavaScript Testing Framework with a focus on simplicity", its creators have described it to be! As a result, teams should leverage as many of the defaults as possible and only divert when necessary.
 
 ## Test Fixture File Names and Locations
 
 It is important to be consistent with how test fixtures are named and where they are located. This helps developers quickly locate the code they are trying to use.
 
-All test fixture names should follow this convention `[file].test.js`. Where the [file] is the name of the file which is being tested.Additionally, all test fixtures should be named with `.test.` preceeding the file extension. The file extension should match the file extention used by the related file.
+All test fixture names should follow this convention `[file].test.js`. Where the [file] is the name of the file which is being tested. Additionally, all test fixtures should be named with `.test.` preceding the file extension. The file extension should match the file extension used by the related file.
 
 **Examples**
 
@@ -29,7 +29,7 @@ request.ts
 request.test.js
 ```
 
-All test fixtures should be located in a `__tests__` directory adjecent to their corresponding implemenation file.
+All test fixtures should be located in a `__tests__` directory adjacent to their corresponding implementation file.
 
 **Examples**
 
@@ -62,9 +62,9 @@ All test fixtures should be located in a `__tests__` directory adjecent to their
 
 Good, consistent, standards within a test fixture are also force multipliers. They help developers read, write, and debug tests more quickly.
 
-[Roy Osherove](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) provides fantastic insights into using the following naming convention for all unit test: `UnitOfWork_StateUnderTest_ExpectedBehavior`. This convention works very well for C# and NUnit, and related languges and testing frameworks. One downside to this convention is that descriptive test names can becoming very long, often times difficult to read.
+[Roy Osherove](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) provides fantastic insights into using the following naming convention for all unit test: `UnitOfWork_StateUnderTest_ExpectedBehavior`. This convention works very well for C# and NUnit, and related languages and testing frameworks. One downside to this convention is that descriptive test names can become very long, oftentimes difficult to read.
 
-Luckly, Jest's `describe` and `it` functions allow us to use Roy's concept, but place each portion of the nameing convention on its own line. The result is test blocks which are very easy to read and reason about! I recommend all unit tests use the following standard. While there is some level of nesting, the code is very easy to reason about and provides excellent reports from Jest when test cases fail.
+Luckily, Jest's `describe` and `it` functions allow us to use Roy's concept but place each portion of the naming convention on its own line. The result is test blocks which are very easy to read and reason about! I recommend all unit tests use the following standard. While there is some level of nesting, the code is very easy to reason about and provides excellent reports from Jest when test cases fail.
 
 **Example**
 
@@ -86,7 +86,7 @@ describe("testFixture", () => {
 });
 ```
 
-Consider the following very simple real world example...
+Consider the following very simple real-world example...
 
 **util.js**
 
@@ -170,7 +170,7 @@ describe("util", () => {
 });
 ```
 
-[Roy Osherove naming standars for unit tests](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html)
+[Roy Osherove naming standards for unit tests](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html)
 
 ## Arrange, Act, Assert
 
@@ -184,7 +184,7 @@ Assert is the final section. Every test method must have at least one Assert sta
 
 The use of Arrange, Act, Assert comments between sections is strongly encouraged.
 
-Assertions mixed throughout a test is a code smell. It indicates the system under test is likely written in a way the violates the SOLID principles of OOP or needs to be simplified to reduce complexity.
+Assertions mixed throughout a test are code smells. It indicates the system under test is likely written in a way the violates the SOLID principles of OOP or needs to be simplified to reduce complexity.
 
 **Examples**
 
@@ -228,7 +228,7 @@ describe("util", () => {
 
 ## Testing React Components
 
-In some cases it is not necessary to include a `describe('unitOfWork')` block because the file name matches the name of the only exported function. In these cases it's preferred to NOT duplicate the name.
+In some cases, it is not necessary to include a `describe('unitOfWork')` block because the file name matches the name of the only exported function. In these cases, it's preferred to NOT duplicate the name.
 
 **Examples**
 
@@ -266,7 +266,7 @@ describe("MyComponent", () => {
 
 ### Using Testing Library
 
-We use react to build user interfaces. As a result we should try our best to test our react applicaitons like as user interfaces! [@testing-library](https://testing-library.com/) will help us do that.
+We use React to build user interfaces. As a result, we should try our best to test our React applications as user interfaces! [@testing-library](https://testing-library.com/) will help us do that.
 
 > The @testing-library family of packages helps you test UI components in a user-centric way.
 >
@@ -280,7 +280,7 @@ We use react to build user interfaces. As a result we should try our best to tes
 
 #### Prefer `getByRole`, `getByLabelText`... AVOID `.getByTestId`
 
-Accessiblity on the web is a thing. Testing Library can help us test the applicaiton in away that is more inclusive other accessiblity needs. Using testing library will help developers write UI's that can be effectively used by more people!
+Accessibility on the web is a thing. Testing Library can help us test the application in a way that is more inclusive of others' accessibility needs. Testing Library will help developers write UI's that can be effectively used by more people!
 
 Learn about all of [Testing Libraries queries](https://testing-library.com/docs/queries/about).
 Then learn the [order of priority](https://testing-library.com/docs/queries/about/#priority) so that you test in the most accessible way!
