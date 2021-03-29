@@ -3,7 +3,6 @@
 Jest really is the "delightful JavaScript Testing Framework with a focus on simplicity", its creators have described it to be! As a result, teams should leverage as many of the defaults as possible and only divert when necessary.
 
 ## Test Fixture File Names and Locations
-
 It is important to be consistent with how test fixtures are named and where they are located. This helps developers quickly locate the code they are trying to use.
 
 All test fixture names should follow this convention `[file].test.js`. Where the [file] is the name of the file which is being tested. Additionally, all test fixtures should be named with `.test.` preceding the file extension. The file extension should match the file extension used by the related file.
@@ -60,11 +59,11 @@ All test fixtures should be located in a `__tests__` directory adjacent to their
 
 ## Naming Conventions within Test Fixtures
 
-Good, consistent, standards within a test fixture are also force multipliers. They help developers read, write, and debug tests more quickly.
+Good, consistent, conventions within a test fixture are also force multipliers. They help developers read, write, and debug tests more quickly.
 
 [Roy Osherove](https://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html) provides fantastic insights into using the following naming convention for all unit test: `UnitOfWork_StateUnderTest_ExpectedBehavior`. This convention works very well for C# and NUnit, and related languages and testing frameworks. One downside to this convention is that descriptive test names can become very long, oftentimes difficult to read.
 
-Luckily, Jest's `describe` and `it` functions allow us to use Roy's concept but place each portion of the naming convention on its own line. The result is test blocks which are very easy to read and reason about! I recommend all unit tests use the following standard. While there is some level of nesting, the code is very easy to reason about and provides excellent reports from Jest when test cases fail.
+Luckily, Jest's `describe` and `it` functions allow us to use Roy's concept but place each portion of the naming convention on its own line. The result is test blocks which are very easy to read and reason about! I recommend all unit tests use the following convention. While there is some level of nesting, the code is very easy to reason about and provides excellent reports from Jest when test cases fail.
 
 **Example**
 
