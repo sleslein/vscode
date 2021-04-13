@@ -1,0 +1,4 @@
+- Use testing-library by default
+- Each test (`it`) should be a UX use case
+- Each test should include multiple assertions to verify various needs.
+- Initial focus should be on "happy path" testing.
