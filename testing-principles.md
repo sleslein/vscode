@@ -1,3 +1,10 @@
+# Philosophy of Automated Testing
+
+The purposes
+1. Confidence - testing
+2. Fast feedback loop - automate
+3. Written down - documentation
+
 # Testing Principles
 
 1. Automated tests should resemble how the software is used.
@@ -6,9 +13,13 @@
     > - Kent C. Dodds [source](https://twitter.com/kentcdodds/status/977018512689455106)
   
 2. Automated tests are for confidence, not metrics
+
    Valid Test Case Coverage > Code Coverage
 
-3. Automated tests are for rapid development over the long term
+3. Optimize for fastest possible developer feedback loop.
+
+   "Shift Left", Identify issues as early as possible.  Starts with unit tests, then functional/integration tests, then e2e tests
+
 
 ## Rants.notes
 
