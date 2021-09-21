@@ -74,3 +74,4 @@ https://testing-library.com/docs/guiding-principles
 
 [Which is more important, line coverage or branch coverage?](https://ardalis.com/which-is-more-important-line-coverage-or-branch-coverage/)
 [Measure manage Quote](https://medium.com/centre-for-public-impact/what-gets-measured-gets-managed-its-wrong-and-drucker-never-said-it-fe95886d3df6)
+[5 Questions Every Test Should Answer](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
