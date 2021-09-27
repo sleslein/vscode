@@ -5,16 +5,33 @@ The purposes
 2. Fast feedback loop - automate
 3. Written down - documentation
 
+An automated test suite is a tool.  As we know every tool has a purpose. An automated test suite serves two purposes.  The first purpose to note is the automation itself.  There are two main reasons to automate testing.  First, automating testing reduces the total amount of time needed to test. Every person's time, attention and mental capabilities are valuable. By automating the testing process we free brilliant minds to solve problems sooner.  The second reason to automate testing is to dramatically improve an engineer's feedback loop.  It is critically important to note that the automation only exists because the test suite is valuable. Never spend time automating tasks which aren't valuable. 
+
+So, what is the purpose of test suite, why is it valuable?  Consider this tweet from Kent C. Dodds.
+
+> The more your tests resemble the way your software is used, the more confidence they can give you.
+> - Kent C. Dodds [source](https://twitter.com/kentcdodds/status/977018512689455106)
+
+This tweet from 2018 highlights main purpose of testing as well as a hard truth.  The purpose of testing is not to find bugs.  If finding bugs were the true purpose then we would measure the success of testing by the number of bugs found. We all know intuitively the number of bugs found during the testing process is not a good measurement of success. Finding bugs is merely the result of the testing process. So, if finding bugs isn't the purpose of testing, what is? The true purpose of testing is confidence that the system is working as intended.  It's the confidence that confirms what we've built works and can be shipped to its customer, and you can move on to the next thing.
+
+As noted, this tweet also contains a hard truth.  Not all tests are equal. That is to say, when fully executed, not all tests suites give you the warm fuzzy confident feeling when you ship the code. This could be for a couple of reasons.  First, the test suites are incomplete.  It has limited test cases.  If you know the test suite is missing key test cases, you will not so confident your shipped product is working as expected.  Secondly, some tests in the test suite may be testing the wrong thing. The prinicples outlined below are intended to guide the development of a well written automated test suite.  An automated test suite that when executed, grants a high level of confidence that the next code shipment which devlivers value to the customer the first time.
+
+
 # Testing Principles
 
-1. Automated tests should resemble how the software is used.
-
-    > The more your tests resemble the way your software is used, the more confidence they can give you.
-    > - Kent C. Dodds [source](https://twitter.com/kentcdodds/status/977018512689455106)
+1. Write tests that reseble how your software is used
   
-2. Automated tests are for confidence, not metrics
+  - Notes on what well written means
+    - Eric Elliot's Every test should answer 5 questions.
+    - use of jest conventions
+    - Use of tesing library
+    - Use of cypress pre-e2e
+  
+2. Value Test Case Coverage over Code Coverage
 
-   Valid Test Case Coverage > Code Coverage
+    Automated tests are for confidence, not metrics
+    - Code Coverage is not a measure of success. Code coverage is a measurement that highlights potentially valuable tests cases may not be covered.  
+
 
 3. Optimize for fastest possible developer feedback loop.
 
@@ -25,9 +42,9 @@ The purposes
 
 # Automated Testing Philosophy
 
-** Purpose of this document:** Give team a better understanding/perspective of\*\*
-** The battle over automated testing rages on, but in new ways. **
-** You're writing your automated tests wrong! **
+**Purpose of this document:** Give team a better understanding/perspective of\*\*
+**The battle over automated testing rages on, but in new ways. **
+**You're writing your automated tests wrong! **
 
 - Maybe only in case of UI testing?
 
