@@ -19,24 +19,46 @@ As noted, this tweet also contains a hard truth.  Not all tests are equal. That 
 
 # Testing Principles
 
-1. Write tests that reseble how your software is used
+The following principles will enable effective development for automated tests suites that will enable the development team to ship software as quickly as possible, _with confidence!_
+
+### 1. Write tests that reseble how your software is used
   
   - Notes on what well written means
     - Eric Elliot's Every test should answer 5 questions.
     - use of jest conventions
     - Use of tesing library
     - Use of cypress pre-e2e
+
+> The more your tests resemble the way your software is used, the more confidence they can give you.
+> - Kent C. Dodds [source](https://twitter.com/kentcdodds/status/977018512689455106)
   
-2. Value Test Case Coverage over Code Coverage
+### 2. Value Test Case Coverage over Code Coverage
 
-    Automated tests are for confidence, not metrics
-    - Code Coverage is not a measure of success. Code coverage is a measurement that highlights potentially valuable tests cases may not be covered.  
+> Code coverage is a measurement that highlights potentially valuable tests cases may not be covered.
+     
+Code coverage is only a metric. It is not the real goal.  As a result we _cannot_ define success with code coverage. Testing is about confidence not metrics.  Our confindence is derived from knowing that the test suite covers as many valid test cases as possible. A single feature or use case/user story likely has several valid test cases. One of those test cases, the "happy path" case as an example, may very well cover more than 80% of the total code surface.  This is especially true with the use of tools like Cypress. But what about those "edge cases", "negative cases", "error case"?  These cases have direct impact on the user and overal system. For that reason these cases are important too!  Writing these tests gives us additional confidence that when the software will fail gracefully.
 
+When writing tests, carefully consider all of the possible valid uses cases and write a test for each.  The result will be increased confidence that the software is working correctly.
 
-3. Optimize for fastest possible developer feedback loop.
+### 3. Optimize for fastest possible developer feedback loop.
 
    "Shift Left", Identify issues as early as possible.  Starts with unit tests, then functional/integration tests, then e2e tests
+   
+> The sooner you catch a failure  
 
+The time between when a feature or change is implemented and when it's test cases have been executed is the feedback loop.  As example, a new field to a form so its data can be persisted to the database. Imagine, the UI portion of the code is complete and we are ready to test.  Now, start your timer and execute these steps:
+
+- Commit the code to the repository
+- Deploy the code to the development server, wait for deployment
+- Manually Open the browser, navigate to the page, test the funcationality works
+- Stop the timer
+
+How long did it take to execute these steps?  5 minutes? 20 minutes? This is the feedback loop. After the test cases are complete, you can know what adjustments need to be made.  After you make those adjustments, then you perform the tests again.  It's obivious that a faster feedback loop is advantagous.  
+
+Automation is the most critical method for increasing the feedback loop.  As a result if a task is valuable and can be automated, it should be automated. This is why CI/CD exists and why we automate tests.  However, just automating the tests may not enough.  
+
+- Tests are automated
+- Tests are placed at the appropriate level (manual, ci, integration, unit, etc)
 
 ## Rants.notes
 
