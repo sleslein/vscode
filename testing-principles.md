@@ -23,16 +23,31 @@ The following principles will enable effective development for automated tests s
 
 ### 1. Write tests that reseble how your software is used
   
-  - Notes on what well written means
-    - Eric Elliot's Every test should answer 5 questions.
-    - use of jest conventions
-    - Use of tesing library
-    - Use of cypress pre-e2e
-
 > The more your tests resemble the way your software is used, the more confidence they can give you.
 > - Kent C. Dodds [source](https://twitter.com/kentcdodds/status/977018512689455106)
+
+- Write tests from the perspective of the user
+- Use of tesing library
+  - Which query should I use? avoid test id
+  - RTL designed to promote using UI as it was intended
+- Use of cypress pre-e2e and e2e
+
+### 2. Well written tests are essential documentation
+
+> A failing test should read like a high-quality bug report.
+> - Eric Elliot, [5 Questions Every Unit Test Must Answer](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d) 
+
+- assert the code is correct - leading to confidence.
+- 5 Questions:
+  1. What were you testing?
+  2. What should it do?
+  3. What was the output (actual behavior)?
+  4. What was the expected output (expected behavior)?
+  5. How can the test be reproduced?
+
+- use of jest conventions - consistency - speeds up developer loop
   
-### 2. Value Test Case Coverage over Code Coverage
+### 3. Value Test Case Coverage over Code Coverage
 
 > Code coverage is a measurement that highlights potentially valuable tests cases may not be covered.
      
@@ -40,7 +55,9 @@ Code coverage is only a metric. It is not the real goal.  As a result we _cannot
 
 When writing tests, carefully consider all of the possible valid uses cases and write a test for each.  The result will be increased confidence that the software is working correctly.
 
-### 3. Optimize for fastest possible developer feedback loop.
+- Discernment is required to understand if spending the engergy to fill in coverage gaps is useful.
+
+### 4. Optimize for fastest possible developer feedback loop.
 
    "Shift Left", Identify issues as early as possible.  Starts with unit tests, then functional/integration tests, then e2e tests
    
@@ -55,70 +72,12 @@ The time between when a feature or change is implemented and when it's test case
 
 How long did it take to execute these steps?  5 minutes? 20 minutes? This is the feedback loop. After the test cases are complete, you can know what adjustments need to be made.  After you make those adjustments, then you perform the tests again.  It's obivious that a faster feedback loop is advantagous.  
 
-Automation is the most critical method for increasing the feedback loop.  As a result if a task is valuable and can be automated, it should be automated. This is why CI/CD exists and why we automate tests.  However, just automating the tests may not enough.  
+Automation is the most critical method for increasing the feedback loop.  As a result if a task is valuable and can be automated, it should be automated. This is why CI/CD exists and why we automate tests.  However, just automating the tests may not enough.  We want to optimize for the fastest possible feedback loop. This means making careful considerations related to: 
 
-- Tests are automated
-- Tests are placed at the appropriate level (manual, ci, integration, unit, etc)
-
-## Rants.notes
-
-# Automated Testing Philosophy
-
-**Purpose of this document:** Give team a better understanding/perspective of\*\*
-**The battle over automated testing rages on, but in new ways. **
-**You're writing your automated tests wrong! **
-
-- Maybe only in case of UI testing?
-
-https://testing-library.com/docs/guiding-principles
-
-## Outline
-
-- Purpose of document
-
-  - Give better perspective on what, why, how we test.
-  - Contrary to belief, not about code coverage, or number of tests.
-  - Positive impact on how we develop software.
-
-  The true purpose of testing softare is self-evident. Testings ensures the quality of of the software. It has always been and will always be an essential part of the software development process. Effective testing is an expensive and repetative process which never ends. It requires the time and energy of many. Those testing are performing a noble important task. We have beautiful creative minds, don't we? When focused our minds can solve the problems which haunt us. However, our beautiful creative minds cannot recognize their true potential and solve important problems while performing the reptative task of testing. So, it is not surprising that we have a desire to automate as much testing as possible.
-
-  Automated testing has always been a battle. In the early days the battle was usually organizational infighting. Automated testing has an upfront cost. In light of the upfront costs, it was challening to convince your engineering colleagues to write unit tests along side features. It was a challenge to convince management and leadership of the benefits of automated testing knowing it would have an impact on delivery schedules. Thankfully, in many organizations those dark days are over!. Automated testing is becoming the standard.
-
-  Today, however, the autotmated testing battle rages on, in a different and unexpected way. As an organization understanding of the benefits of automated testing hit critical mass, leadership and management get invovled. This is a good thing because buy-in from leadership/management is absolutely required for lasting and meaningful change to any process. With leadership and management on board casting a pro-automated testing vision, engineers can move forward with peace of mind. With the vision in place, leaders and managers look to measure the progress of the vision. This is where the present battle starts to unfold.
-
-  ## "Whatever gets measured gets managed..."
-
-  In order to measure something you have to quantify it. So, as it relates to automated testing, what do we quantify and measure? In many cases the default measurement of automated testing success has become code coverage. Now, don't mistake me. Code coverage is an important metric and it should be measured and reported. The real problem is two fold. First, code coverage as become THE metric which defines success. Meaning, code coverge is the primary metric leadership and management discuss when it comes to the effectiveness of a teams automated testing efforts. As the old saying goes, "whatever gets measured gets managed". This results in tests being written with the primary purpose of increasing code coverage. Writing these tests is often times very easy. These test however pose a serious problem. They don't offer any real value. Sure, leadership and management are appeased to see the metrics improve. However, a test written only with the purpose of code coverage in mind doesn't meet the true purposes of automated testing. They offer real confidence that a change didn't add a true regression bug. In fact they hurt, because they add noise to the codebase.
-
-  - Merits of code coverage: It's a spotlight on missing test cases.
-
-  As modern day software engineers in an engineering/tech company, we are constantly bombarded with the message that when it comes to automated testings, code coverage is king! L As a result we often define the success of our testing efforts soley on the code coverage metric.
-
-  Let's review the benefits of automated testing. In doing so, lets also define why we test software.
-
-  So, in summary, the main purpose of
-
-- Purpose of Automated Testing
-
-  - Confidence - This is the big idea!
-  - Not about finding bugs
-  - Testing always
-
-- What do we test? ???? Keep specific to UI ????
-
-  - Unit Tests
-  - Integration Tests
-
-- Purupose of Automated Testing
-
-  - Faster feedback loop for Devs
-  - Faster Development Cycles
-
-- Purpose of Code Coverage
-  - Not the goal of automated testing.
-  - Leading indicator concerning which uses cases have been tested
-    - Deep work, leading indicators
-  -
+- Where are located in the source code
+- How quickly tests can execute
+- Which types of tests are used: unit tests, integration tests, e2e tests, etc
+- How much effort is needed to create tests
 
 ### References
 
